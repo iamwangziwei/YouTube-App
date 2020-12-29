@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490DD60F259AF48800B559E1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DD60E259AF48800B559E1 /* Response.swift */; };
 		4930361C25997291005B0921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930361B25997291005B0921 /* AppDelegate.swift */; };
 		4930361E25997291005B0921 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930361D25997291005B0921 /* SceneDelegate.swift */; };
 		4930362025997291005B0921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930361F25997291005B0921 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490DD60E259AF48800B559E1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		4930361825997291005B0921 /* youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4930361B25997291005B0921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4930361D25997291005B0921 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				49303651259986A7005B0921 /* constants.swift */,
 				4930365625998BBA005B0921 /* Video.swift */,
 				4930365B25998C31005B0921 /* Model.swift */,
+				490DD60E259AF48800B559E1 /* Response.swift */,
 			);
 			path = youtube;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				4930365C25998C31005B0921 /* Model.swift in Sources */,
 				49303652259986A7005B0921 /* constants.swift in Sources */,
 				4930365725998BBA005B0921 /* Video.swift in Sources */,
+				490DD60F259AF48800B559E1 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +455,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RUVF8FBK5G;
 				INFOPLIST_FILE = youtube/Info.plist;
-				
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,7 +474,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RUVF8FBK5G;
 				INFOPLIST_FILE = youtube/Info.plist;
-				
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
