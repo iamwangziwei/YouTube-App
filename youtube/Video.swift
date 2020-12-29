@@ -9,47 +9,53 @@ import Foundation
 
 struct Video: Decodable{
     
-    var videoID = ""
+    var videoId = ""
     var title = ""
     var description = ""
     var thumbnail = ""
     var published = Date()
     
     enum CodingKeys: String, CodingKey {
-        case snippet
-        case thumbnails
-        case high
-        case resourceId
-        case published = "publishedAt"
-        case title
-        case description
-        case thumbnail = "url"
-        case videoID
+           
+       case snippet
+       case thumbnails
+       case high
+       case resourceId
+       
+       case published = "publishedAt"
+       case title
+       case description
+       case thumbnail = "url"
+       case videoId
+       
+   }
     
-    }
-    
-    init (from decoder: Decoder) throws{
-        let container = try decoder.container(keyedBy:CodingKeys.self )
-        let snippetcontainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
+    init (from decoder: Decoder) throws {
         
-        //parse title
-        self.title = try snippetcontainer.decode(String.self, forKey: .title)
-        //parse description
-        self.description  = try snippetcontainer.decode(String.self, forKey: .description)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        //parse the published  date
-        self.published = try snippetcontainer.decode(Date.self, forKey: .published)
+        let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
         
-        //parse the thumbnail
-        let thumbnailcontainer = try snippetcontainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
-        let highcontainer = try thumbnailcontainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
+        // Parse title
+        self.title = try snippetContainer.decode(String.self, forKey: .title)
         
-        self.thumbnail = try highcontainer.decode(String.self, forKey: .thumbnail)
+        // Parse description
+        self.description = try snippetContainer.decode(String.self, forKey: .description)
         
-        //parse video id
-        let resourceidcontainer  = try snippetcontainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
+        // Parse the publish date
+        self.published = try snippetContainer.decode(Date.self, forKey: .published)
         
-        self.videoID = try resourceidcontainer.decode(String.self, forKey: .videoID)
+        // Parse thumbnails
+        let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
+        
+        let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
+        
+        self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnail)
+        
+        // Parse Video ID
+        let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
+        
+        self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
     }
     
 }
