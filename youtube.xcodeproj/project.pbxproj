@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		490DD60F259AF48800B559E1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DD60E259AF48800B559E1 /* Response.swift */; };
+		490DD625259B95BB00B559E1 /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DD624259B95BB00B559E1 /* ConstantsTemplate.swift */; };
+		490DD633259BC26100B559E1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DD632259BC26100B559E1 /* TableViewCell.swift */; };
+		490DD643259C08DA00B559E1 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DD642259C08DA00B559E1 /* CacheManager.swift */; };
 		4930361C25997291005B0921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930361B25997291005B0921 /* AppDelegate.swift */; };
 		4930361E25997291005B0921 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930361D25997291005B0921 /* SceneDelegate.swift */; };
 		4930362025997291005B0921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930361F25997291005B0921 /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		490DD60E259AF48800B559E1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		490DD624259B95BB00B559E1 /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
+		490DD632259BC26100B559E1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		490DD642259C08DA00B559E1 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		4930361825997291005B0921 /* youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4930361B25997291005B0921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4930361D25997291005B0921 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490DD637259BC27B00B559E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4930365625998BBA005B0921 /* Video.swift */,
+				4930365B25998C31005B0921 /* Model.swift */,
+				490DD60E259AF48800B559E1 /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		490DD638259BC28400B559E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				490DD632259BC26100B559E1 /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		490DD639259BC29200B559E1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4930361F25997291005B0921 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		490DD63A259BC2A600B559E1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4930362125997291005B0921 /* Main.storyboard */,
+				4930362625997293005B0921 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		490DD63B259BC2B800B559E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				49303651259986A7005B0921 /* constants.swift */,
+				490DD624259B95BB00B559E1 /* ConstantsTemplate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4930360F25997291005B0921 = {
 			isa = PBXGroup;
 			children = (
@@ -109,15 +159,14 @@
 			children = (
 				4930361B25997291005B0921 /* AppDelegate.swift */,
 				4930361D25997291005B0921 /* SceneDelegate.swift */,
-				4930361F25997291005B0921 /* ViewController.swift */,
-				4930362125997291005B0921 /* Main.storyboard */,
+				490DD63B259BC2B800B559E1 /* Helpers */,
+				490DD63A259BC2A600B559E1 /* Storyboards */,
+				490DD639259BC29200B559E1 /* View Controllers */,
+				490DD638259BC28400B559E1 /* Views */,
+				490DD637259BC27B00B559E1 /* Models */,
 				4930362425997293005B0921 /* Assets.xcassets */,
-				4930362625997293005B0921 /* LaunchScreen.storyboard */,
 				4930362925997293005B0921 /* Info.plist */,
-				49303651259986A7005B0921 /* constants.swift */,
-				4930365625998BBA005B0921 /* Video.swift */,
-				4930365B25998C31005B0921 /* Model.swift */,
-				490DD60E259AF48800B559E1 /* Response.swift */,
+				490DD642259C08DA00B559E1 /* CacheManager.swift */,
 			);
 			path = youtube;
 			sourceTree = "<group>";
@@ -273,7 +322,10 @@
 				4930362025997291005B0921 /* ViewController.swift in Sources */,
 				4930361C25997291005B0921 /* AppDelegate.swift in Sources */,
 				4930361E25997291005B0921 /* SceneDelegate.swift in Sources */,
+				490DD633259BC26100B559E1 /* TableViewCell.swift in Sources */,
+				490DD625259B95BB00B559E1 /* ConstantsTemplate.swift in Sources */,
 				4930365C25998C31005B0921 /* Model.swift in Sources */,
+				490DD643259C08DA00B559E1 /* CacheManager.swift in Sources */,
 				49303652259986A7005B0921 /* constants.swift in Sources */,
 				4930365725998BBA005B0921 /* Video.swift in Sources */,
 				490DD60F259AF48800B559E1 /* Response.swift in Sources */,
