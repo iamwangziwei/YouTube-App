@@ -62,6 +62,7 @@
                                             <outlet property="dataLabel" destination="e3I-8d-taa" id="vzy-uK-6L9"/>
                                             <outlet property="thumbnailImageView" destination="TE2-zO-kHt" id="z5t-xL-CmN"/>
                                             <outlet property="titleLable" destination="aVC-Vv-hJp" id="ox0-5D-zma"/>
+                                            <segue destination="VO2-mZ-kSP" kind="show" id="9S3-hr-92o"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,8 +85,78 @@
             </objects>
             <point key="canvasLocation" x="138" y="60"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="4D1-iU-pk5">
+            <objects>
+                <viewController id="VO2-mZ-kSP" customClass="DetailViewController" customModule="youtube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E2s-fQ-Ye9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-zo-t6Q">
+                                <rect key="frame" x="20" y="50" width="374" height="758"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puL-5S-nmQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxC-CU-i5z">
+                                        <rect key="frame" x="0.0" y="30.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kv9-5c-T4H">
+                                        <rect key="frame" x="0.0" y="61" width="374" height="210.5"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Kv9-5c-T4H" secondAttribute="height" multiplier="1280:720" id="R6L-rr-lmG"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="247" verticalCompressionResistancePriority="747" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="15r-Gb-KrG">
+                                        <rect key="frame" x="0.0" y="281.5" width="374" height="476.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ilc-6g-pB4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pPb-zo-t6Q" firstAttribute="top" secondItem="ilc-6g-pB4" secondAttribute="top" constant="50" id="2gt-1v-fbZ"/>
+                            <constraint firstItem="pPb-zo-t6Q" firstAttribute="top" secondItem="ilc-6g-pB4" secondAttribute="top" constant="50" id="5MF-ov-kHk"/>
+                            <constraint firstItem="ilc-6g-pB4" firstAttribute="bottom" secondItem="pPb-zo-t6Q" secondAttribute="bottom" id="CPP-gX-gex"/>
+                            <constraint firstItem="ilc-6g-pB4" firstAttribute="trailing" secondItem="pPb-zo-t6Q" secondAttribute="trailing" constant="20" id="GUy-Kd-wXS"/>
+                            <constraint firstItem="pPb-zo-t6Q" firstAttribute="leading" secondItem="ilc-6g-pB4" secondAttribute="leading" constant="20" id="OXq-w3-iWI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y8F-XD-fpA"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="qxC-CU-i5z" id="WRd-aP-Ukz"/>
+                        <outlet property="textview" destination="15r-Gb-KrG" id="FH0-c5-RhI"/>
+                        <outlet property="titleLabel" destination="puL-5S-nmQ" id="TxL-cg-Udh"/>
+                        <outlet property="webview" destination="Kv9-5c-T4H" id="rBM-UM-iW3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYv-Te-baM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="60"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
